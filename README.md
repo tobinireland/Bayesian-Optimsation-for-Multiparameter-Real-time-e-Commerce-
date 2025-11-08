@@ -80,7 +80,56 @@ We will use **Bayesian Optimization** to optimize multiple objectives simultaneo
 - Sample data for GitHub: `data/raw/online_retail_II_sample.csv`
 - The dataset includes columns such as `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, and `Country`.
 
+### Hyperparameter Optimization Notebook
 
+In addition to the basic 2-parameter optimization notebook (main_optimization.ipynb), we provide a more advanced 5-hyperparameter Bayesian Optimization notebook:
+
+Notebook: notebooks/main_optimization_5_parameters.ipynb
+
+Purpose: Optimize multiple aspects of pricing and promotions to maximize estimated customer profit.
+
+Hyperparameters included:
+
+Price_Multiplier (continuous) – scales the product price.
+
+Promotion (categorical) – type of promotion applied (No_Discount, Discount_5%, Discount_10%).
+
+Bundle_Size (integer) – simulates the effect of selling multiple units together.
+
+DayOfWeek (categorical) – adjusts expected profitability based on the day of the week.
+
+Max_Discount_Percent (continuous) – limits maximum allowed discount for a promotion.
+
+### How the Notebook Works
+
+Load full dataset: The notebook uses the full Online Retail II dataset (2010–2011) for realistic optimization.
+
+Data preprocessing: Handles missing values, ensures correct types, filters invalid transactions, and computes row-level profit.
+
+Feature engineering: Adds columns for Profit, Promotion, and DayOfWeek.
+
+Day-of-week multipliers: Historical profits per day are normalized to adjust estimated profit in the optimization.
+
+Objective function: Combines all hyperparameters into an estimated profit calculation. The objective is to maximize profit, implemented as minimization of negative profit for the optimizer.
+
+Bayesian Optimization: Runs gp_minimize from scikit-optimize to efficiently search the 5-dimensional hyperparameter space.
+
+Output: Returns the best hyperparameters and the maximum estimated profit.
+
+### Benefits of 5-Hyperparameter Optimization
+
+Demonstrates how Bayesian Optimization handles mixed types of hyperparameters (continuous, integer, categorical).
+
+Incorporates day-of-week effects, which can be extended to seasonality or customer segments.
+
+Provides a scalable framework to include additional business-relevant hyperparameters in the future.
+
+### How to Run
+
+Activate the Python environment: conda activate capstone
+Launch Jupyter Notebook: jupyter notebook
+Open the Notebook: notebooks/main_optimization_5_parameters.ipynb
+Execute cells sequentially to run the full BAyesian optimzation on the complete dataset
 
 
 
