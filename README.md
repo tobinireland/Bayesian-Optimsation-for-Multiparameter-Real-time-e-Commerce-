@@ -124,6 +124,60 @@ Incorporates day-of-week effects, which can be extended to seasonality or custom
 
 Provides a scalable framework to include additional business-relevant hyperparameters in the future.
 
+### Hyperparameter Optimization Notebook
+
+The notebook main_optimization_5_parameters.ipynb extends the basic Bayesian optimization workflow to five tunable hyperparameters:
+
+Price_Multiplier (continuous) – adjusts product price for optimization.
+
+Promotion (categorical) – applies a discount type (No_Discount, Discount_5%, Discount_10%).
+
+Bundle_Size (integer) – simulates product bundling strategies.
+
+DayOfWeek (categorical) – incorporates historical sales variation by weekday.
+
+Max_Discount_Percent (continuous) – limits maximum discount applied.
+
+Workflow
+
+Load full dataset: Uses data/raw/online_retail_II.xlsx to maximize insights.
+
+Feature engineering:
+
+Computes row-level profit (Profit = Quantity * Price).
+
+Extracts day of the week from InvoiceDate.
+
+Randomly assigns promotions for demonstration purposes.
+
+Define objective function:
+
+Adjusts price and applies promotions and bundle size.
+
+Computes estimated profit per transaction.
+
+Returns the negative sum of estimated profit to maximize total profit during optimization.
+
+Set search space: Five hyperparameters with appropriate types (continuous, categorical, integer).
+
+Run Bayesian optimization: Efficiently explores the parameter space to find the combination that maximizes estimated profit.
+
+Output:
+
+Best hyperparameter combination.
+
+Corresponding estimated profit.
+
+Optional visualizations of hyperparameter effects.
+
+Notes
+
+The DayOfWeek parameter currently modifies the objective based on historical day-of-week effects. You can extend it to include seasonality, promotions, or customer segments.
+
+This notebook demonstrates multi-objective optimization on a real retail dataset and serves as the core model for the project.
+
+The workflow is reproducible and modular: you can swap in new hyperparameters or apply it to other datasets.
+
 ### How to Run
 
 Activate the Python environment: conda activate capstone
