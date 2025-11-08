@@ -185,6 +185,25 @@ Launch Jupyter Notebook: jupyter notebook
 Open the Notebook: notebooks/main_optimization_5_parameters.ipynb
 Execute cells sequentially to run the full BAyesian optimzation on the complete dataset
 
+### Performance Metrics
+To evaluate the effectiveness of the optimization model, it is important to choose metrics that reflect the goals of the task. For this project, potential metrics include:
 
+Total Estimated Profit – the sum of predicted profits across all transactions; the main objective to maximize.
+
+Mean Profit per Transaction – average profit per row, useful to identify overall efficiency improvements.
+
+Root Mean Squared Error (RMSE) – if comparing predicted vs actual profit, RMSE measures how far predictions deviate from actual values.
+
+Misclassification Rate – if extending the model to predict discrete outcomes (e.g., promotion type), this metric evaluates prediction accuracy.
+
+Hyperparameter Effectiveness – assess how each hyperparameter contributes to improved profit or reduced variance, using visualization or sensitivity analysis.
+
+#### Notes
+
+The choice of metric depends on the optimization objective and the type of predictions (continuous vs categorical).
+
+Visualizing metrics alongside hyperparameter values can provide insights into which parameters drive performance improvements.
+
+This ensures the model is not only optimized but also evaluated in a way that aligns with business goals, such as maximizing revenue or customer lifetime value.
 
 
