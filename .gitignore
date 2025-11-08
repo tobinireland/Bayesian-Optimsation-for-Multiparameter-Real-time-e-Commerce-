@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+env/
+
+# Data
+data/raw/
+data/large/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Mac
+.DS_Store
+
+# VSCode
+.vscode/
+
