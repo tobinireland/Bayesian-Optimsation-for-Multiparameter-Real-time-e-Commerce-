@@ -58,6 +58,28 @@ We are using the **Online Retail II** dataset from the **UCI Machine Learning Re
 4. Navigate to `notebooks/explore_dataset.ipynb` to explore the dataset.
 
 
+## Problem Definition
+
+Our goal is to predict the best product, price, and promotional offer for each customer to maximize customer lifetime profitability. This is a multi-objective problem: determining what the next promotion should be for each customer.
+
+## Modeling Approach
+
+We will use **Bayesian Optimization** to optimize multiple objectives simultaneously. This approach allows us to efficiently explore the space of possible product, price, and promotional combinations for each customer to maximize expected profitability.
+
+### Why Bayesian Optimization
+
+- Handles **multi-objective optimization** effectively.
+- Works well for problems with **several tunable hyperparameters** (typically 2–8), which fits our dataset.
+- Efficiently searches the space without requiring exhaustive evaluation.
+
+### Dataset
+
+- The dataset is sourced from the UCI Machine Learning Repository, containing **two years of retail e-commerce transactions**.
+- Sample data for GitHub: `data/raw/online_retail_II_sample.csv`
+- The dataset includes columns such as `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, and `Country`.
+
+### Project Structure (updated)
+
 
 
 
