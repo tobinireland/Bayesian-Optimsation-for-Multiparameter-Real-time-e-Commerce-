@@ -3,30 +3,61 @@
 **Author:** Tobin Ireland  
 **Course:** Imperial College - Professional CErtificated in ML and AI  — Capstone Project  
 
----
+## Project Overview
 
-## 📘 Overview
-This project explores how Bayesian optimisation can improve multi-parameter tuning for real-time e-commerce environments.
+This capstone project explores **Bayesian Optimisation** applied to multiparameter decision-making in real-time e-commerce settings.  
+We aim to optimise metrics like pricing, promotions, and inventory allocation based on historical retail data.
 
-The goal is to use real retail datasets and demonstrate how Bayesian optimisation can enhance decision-making in areas like pricing, inventory, and timing.
+## Dataset
 
----
+We are using the **Online Retail II** dataset from the **UCI Machine Learning Repository**.
 
-## 📂 Repository Structure
-- `src/` — Python scripts  
-- `notebooks/` — Jupyter notebooks for analysis & experiments  
-- `data/` — dataset files (raw and processed)  
-- `results/` — figures, tables, model outputs  
-- `docs/` — reports and documentation  
+- **Source:** [UCI Machine Learning Repository - Online Retail II](https://archive.ics.uci.edu/ml/datasets/online+retail+ii)  
+- **Years:** 2010-2011  
+- **Number of rows:** ~500,000  
+- **Number of columns:** 8  
 
----
+### Column Descriptions
 
-## ⚙️ Setup
+| Column Name  | Description |
+|--------------|-------------|
+| InvoiceNo    | Invoice number (unique identifier for each transaction) |
+| StockCode    | Product (item) code |
+| Description  | Product (item) name |
+| Quantity     | Quantity of each product per transaction |
+| InvoiceDate  | Invoice date and time |
+| UnitPrice    | Unit price of the product |
+| CustomerID   | Customer number |
+| Country      | Country name |
 
-1. Create a virtual environment  
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
+## Project Structure
+
+.
+├── data
+│   ├── raw                              # Original Excel dataset
+│   └── raw/online_retail_II_sample.csv  # Sample dataset for GitHub
+├── notebooks
+│   └── explore_dataset.ipynb
+├── README.md
+└── .gitignore
+
+## How to Use
+
+1. Clone this repository:
+
+   git clone https://github.com/tobinireland/Bayesian-Optimsation-for-Multiparameter-Real-time-e-Commerce-.git
+
+2. Activate the Python environment:
+
+   conda activate capstone
+
+3. Open the Jupyter Notebook:
+
+   jupyter notebook
+
+4. Navigate to `notebooks/explore_dataset.ipynb` to explore the dataset.
+
+
 
 
 
