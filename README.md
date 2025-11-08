@@ -138,11 +138,11 @@ DayOfWeek (categorical) – incorporates historical sales variation by weekday.
 
 Max_Discount_Percent (continuous) – limits maximum discount applied.
 
-## Workflow
+#### Workflow
 
 Load full dataset: Uses data/raw/online_retail_II.xlsx to maximize insights.
 
-## Feature engineering:
+#### Feature engineering:
 
 Computes row-level profit (Profit = Quantity * Price).
 
@@ -162,7 +162,7 @@ Set search space: Five hyperparameters with appropriate types (continuous, categ
 
 Run Bayesian optimization: Efficiently explores the parameter space to find the combination that maximizes estimated profit.
 
-## Output:
+#### Output:
 
 Best hyperparameter combination.
 
@@ -170,7 +170,7 @@ Corresponding estimated profit.
 
 Optional visualizations of hyperparameter effects.
 
-## Notes
+#### Notes
 
 The DayOfWeek parameter currently modifies the objective based on historical day-of-week effects. You can extend it to include seasonality, promotions, or customer segments.
 
