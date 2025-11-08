@@ -78,7 +78,7 @@ We will use **Bayesian Optimization** to optimize multiple objectives simultaneo
 - Sample data for GitHub: `data/raw/online_retail_II_sample.csv`
 - The dataset includes columns such as `InvoiceNo`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `UnitPrice`, `CustomerID`, and `Country`.
 
-### Project Structure (updated)
+
 
 
 
