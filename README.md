@@ -56,6 +56,8 @@ We are using the **Online Retail II** dataset from the **UCI Machine Learning Re
    jupyter notebook
 
 4. Navigate to `notebooks/explore_dataset.ipynb` to explore the dataset.
+5. Navigate to 'notebooks/main_optimization.ipynb' to run a 2 hyper-parameter bayesian optimization
+6. Navigate to 'notebooks/main_optimization_5_parameters.ipynb' to run a 5 hyper-parameter bayesian optimization
 
 
 ## Problem Definition
